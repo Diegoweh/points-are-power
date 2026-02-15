@@ -23,7 +23,7 @@ export default function Newsletter() {
     );
 
     // Define success callback
-    (window as Record<string, unknown>).ml_webform_success_31583812 =
+    (window as unknown as Record<string, unknown>).ml_webform_success_31583812 =
       function () {
         setSubmitted(true);
       };
