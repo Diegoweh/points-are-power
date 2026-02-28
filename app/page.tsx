@@ -1,6 +1,7 @@
 import Carousel from "./components/Carousel";
 import Calendly from "./components/Calendly";
 import Newsletter from "./components/Newsletter";
+import ContactForm from "./components/ContactForm";
 
 const galleryImages = [
   // { src: "/img/gallery-1.avif", alt: "Travel adventure 1" },
@@ -387,6 +388,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Contact Section */}
+      <section id="contact" className="bg-white py-20">
+        <div className="mx-auto max-w-xl px-6">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-[#15548f] md:text-4xl">Get in Touch</h2>
+            <p className="mx-auto mt-4 max-w-md text-gray-600">
+              Have questions? Fill out the form and we&apos;ll connect with you directly on WhatsApp.
+            </p>
+          </div>
+          <div className="mt-10">
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
       {/* Collaborising Section */}
       <section className="bg-gray-50 py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
@@ -394,7 +410,7 @@ export default function Home() {
             <p className="text-2xl leading-relaxed text-gray-600 md:text-3xl">
               <span className="font-bold text-[#15548f]">Points Are Power</span>{" "}
               is a program of{" "}
-              <span className="font-bold text-[#15548f]">Collaborising</span>
+              <span className="font-bold text-[#15548f]">Collaborising 501(c)(3)</span>
             </p>
             <a
               href="https://www.collaborising.org/"

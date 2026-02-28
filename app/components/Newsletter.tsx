@@ -38,7 +38,7 @@ export default function Newsletter() {
       {!submitted ? (
         <div>
           <h4 className="mb-2 text-3xl font-semibold text-white">
-            Start Your Points Journey Today
+            Subscribe To Us
           </h4>
           <h3 className="mb-8 text-lg text-white/80">
             Enter your email address for more updates
@@ -69,7 +69,7 @@ export default function Newsletter() {
 
             <button
               type="submit"
-              className="w-full rounded-lg bg-accent px-6 py-3 text-sm font-bold text-[#15548f] transition-colors hover:bg-white"
+              className="w-full rounded-lg bg-white px-6 py-3 text-sm font-bold text-[#15548f] transition-colors hover:bg-[#80baf1] hover:text-white focus:ring-2 focus:ring-accent"
             >
               Unlock Travel Tips
             </button>
