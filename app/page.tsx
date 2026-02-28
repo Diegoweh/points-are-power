@@ -403,6 +403,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Banner */}
+      <div className="bg-[#15548f] py-4 text-center text-white font-semibold text-4xl">
+        
+      </div>
+
       {/* Collaborising Section */}
       <section className="bg-gray-50 py-20">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-2">
@@ -411,6 +416,9 @@ export default function Home() {
               <span className="font-bold text-[#15548f]">Points Are Power</span>{" "}
               is a program of{" "}
               <span className="font-bold text-[#15548f]">Collaborising 501(c)(3)</span>
+            </p>
+            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                 A nonprofit organization committed to empowering people through spiritual alignment, financial education, and restorative support—anchored in the belief that every person deserves dignity, opportunity, and the ability to rise.
             </p>
             <a
               href="https://www.collaborising.org/"
