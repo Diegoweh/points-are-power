@@ -13,44 +13,58 @@ const galleryImages = [
 
 const services = [
   {
-    name: "4 Weeks Program",
-    originalPrice: "$497",
-    price: "$297",
-    description: "A focused jumpstart to earning and using travel points.",
+    name: "Concierge Strategy Intensive",
+    subtitle: "3-Hour Private Consultation",
+    price: "$157",
+    description: "Work 1:1 with Ramon for a personalized roadmap built around your travel goals and spending patterns.",
     features: [
-      "Personalized credit card recommendations",
-      "Basic points strategy guide",
-      "Email support",
-      "Weekly check-ins",
+      "3 hours of private 1:1 strategy",
+      "Flexible schedule: choose 1 session of 3 hours, or 2 sessions of 1.5 hours, or 3 sessions of 1 hour",
+      "Custom points & travel roadmap",
+      "Portfolio review & card recommendations",
     ],
   },
   {
-    name: "12 Weeks Program",
-    originalPrice: "$997",
+    name: "Toe in the Water",
+    subtitle: "4-Week Strategic Introduction",
     price: "$597",
-    description: "Our most popular program for families ready to travel smarter.",
+    description: "Start smart. Build a real credit card points strategy from the ground up in a small-group setting.",
     features: [
-      "Everything in 4 Weeks",
-      "Custom travel booking assistance",
-      "Points maximization strategy",
-      "Priority email & chat support",
-      "Bi-weekly strategy calls",
+      "4 live 90-min group sessions",
+      "Credit fundamentals & responsible use",
+      "Card selection framework",
+      "Sign-up bonus strategy",
+      "1 private 90-min session with Ramon",
+    ],
+  },
+  {
+    name: "Wading in the Water",
+    subtitle: "8-Week Guided Implementation",
+    price: "$1,297",
+    description: "Move from strategy to execution. Apply, track, and build your points ecosystem with expert guidance.",
+    features: [
+      "8 live 90-min group sessions",
+      "Live application walkthroughs",
+      "Denial troubleshooting",
+      "Points organization & referral strategy",
+      "2 private 90-min sessions with Ramon",
     ],
     popular: true,
   },
   {
-    name: "20 Weeks Program",
-    originalPrice: "$1,897",
-    price: "$997",
-    description: "The ultimate program for full-service luxury travel planning.",
+    name: "Deep Waters Strategy",
+    subtitle: "12-Week Advanced Optimization",
+    price: "$1,997",
+    description: "Build a coordinated, multi-card ecosystem. Precision strategy for serious points earners ready to scale.",
     features: [
-      "Everything in 12 Weeks",
-      "Dedicated travel concierge",
-      "Flight & hotel booking management",
-      "Complete points audit & optimization",
-      "Unlimited support calls",
+      "12 live 90-min group sessions",
+      "Real-time offer analysis",
+      "Advanced sequencing & timing",
+      "Business card & referral strategy",
+      "3 private 90-min sessions with Ramon",
     ],
   },
+  
 ];
 
 export default function Home() {
@@ -86,12 +100,17 @@ export default function Home() {
           </p>
           <a
             href="#services"
-            className="mt-8 inline-block rounded-full bg-[#15548f] px-8 py-3 text-lg font-semibold text-primary transition-transform hover:scale-105"
+            className="mt-8 inline-block rounded-full bg-[#15548f] px-8 py-3 text-lg font-semibold text-white transition-transform hover:scale-105"
           >
             Explore Our Services
           </a>
         </div>
       </section>
+
+      {/* Banner */}
+      <div className="bg-[#15548f] py-4 text-center text-white font-semibold text-4xl">
+        Your Boarding Pass to Points &amp; Miles
+      </div>
 
       {/* About Us Section */}
       <section id="about" className="bg-white py-20">
@@ -115,11 +134,11 @@ export default function Home() {
               </p>
             </div>
             <div className="flex items-center justify-center">
-              <div className="flex h-64 w-full items-center justify-center rounded-2xl bg-accent/40">
+              <div className="flex w-full items-center justify-center rounded-2xl bg-accent/40">
                 <img 
                   src="/img/about-img.avif" 
                   alt="Avión"
-                  className="h-100 w-150 object-contain rounded-2xl"
+                  className="object-contain rounded-2xl"
                 />
               </div>
             </div>
@@ -127,15 +146,96 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Meet the Coach */}
+      <section className="bg-gray-50 py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid items-center gap-12 md:grid-cols-2">
+            <div className="flex items-center justify-center">
+              <div className="flex w-full items-center justify-center rounded-2xl bg-accent/40">
+                <img
+                  src="/img/ramon.jpg"
+                  alt="Ramon Quintana"
+                  className="object-contain rounded-2xl h-100 "
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-[#15548f] md:text-4xl">
+                Meet Your Credit Card Strategist — Ramon Quintana
+              </h2>
+              <p className="mt-6 leading-relaxed text-gray-600">
+                Ramon is a travel strategist and points educator who has helped hundreds of families unlock luxury travel experiences they never thought possible. His passion for smart travel began when he discovered the untapped power of credit card rewards — and realized most people were leaving thousands of dollars in value on the table every year.
+              </p>
+              <p className="mt-4 leading-relaxed text-gray-600">
+                Through his programs and community, Ramon breaks down complex points strategies into clear, actionable steps — so anyone, regardless of experience, can start traveling smarter. His approach is personal, practical, and proven.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Banner */}
+      <div className="bg-[#15548f] py-4 text-center text-white font-semibold text-4xl">
+        Unleashing the Power of Points
+      </div>
+
+      <section id="about" className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid items-center gap-12 md:grid-cols-2">
+          <div className="flex items-center justify-center">
+              <div className="flex w-full items-center justify-center rounded-2xl bg-accent/40">
+                <img 
+                  src="/img/Airplane.webp" 
+                  alt="Avión"
+                  className="object-contain rounded-2xl"
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-[#15548f] md:text-4xl">
+                Points aren't just rewards, they're leverage
+              </h2>
+              <p className="mt-6 leading-relaxed text-gray-600">
+                When used strategically, they unlock travel, upgrades, experiences, and financial flexibility you didn't know were possible.
+              </p>
+              <p className="mt-4 leading-relaxed text-gray-600">
+                I'll teach you how to earn smarter, redeem better, and stop leaving value on the table. This isn't about spending more, it's about maximizing what you already spend. Your everyday purchases can fund extraordinary experiences.
+              </p>
+            </div>            
+          </div>
+        </div>
+      </section>
+
+      {/* Banner 2 */}
+      <div className="bg-[#15548f] py-6 text-center text-white">
+        <p className="text-4xl font-semibold">Ready to start your journey?</p>
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="#consultation"
+            className="inline-block rounded-full border-2 border-white px-6 py-2 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-[#15548f]"
+          >
+            Use my Calendly
+          </a>
+          <a
+            href="https://wa.me/13057880456?text=Hi%2C%20I'm%20interested%20in%20your%20Points%20%26%20Miles%20program"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-full border-2 border-white px-6 py-2 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-[#15548f]"
+          >
+            Message us on WhatsApp
+          </a>
+        </div>
+      </div>
+
       {/* Gallery Section */}
-      <section className="bg-[#15548f] py-20">
+      {/* <section className="bg-[#15548f] py-20">
         <div className="mx-auto max-w-3xl px-6">
           <h2 className="mb-10 text-center text-3xl font-bold text-white md:text-4xl">
             Travel Adventures Powered by Points
           </h2>
           <Carousel images={galleryImages} />
         </div>
-      </section>
+      </section> */}
 
       {/* Services / Pricing Section */}
       <section id="services" className="bg-gray-50 py-20">
@@ -150,7 +250,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
               <div
                 key={service.name}
@@ -168,13 +268,13 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-[#15548f]">
                   {service.name}
                 </h3>
-                <p className="mt-2 text-sm text-gray-500">
+                <p className="mt-1 text-xs font-medium text-gray-400 uppercase tracking-wide">
+                  {service.subtitle}
+                </p>
+                <p className="mt-3 text-sm text-gray-500">
                   {service.description}
                 </p>
                 <div className="mt-6">
-                  <p className="text-lg text-gray-400 line-through">
-                    {service.originalPrice}
-                  </p>
                   <p className="text-4xl font-bold text-[#15548f]">
                     {service.price}
                   </p>
@@ -217,12 +317,56 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Testimonials Section */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <h2 className="mb-12 text-center text-3xl font-bold text-[#15548f] md:text-4xl">
+            What Our Members Are Saying
+          </h2>
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="flex flex-col gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-8">
+              <p className="leading-relaxed text-gray-600">
+                "Have you ever wondered how I can travel so much? Well, thanks to a virtual workshop called Points Are Power I learned a lot of valuable info that upgraded my travel experience. Things like having the right travel card that offers the most points. I used my Chase points to help pay for my airline ticket to Thailand, to book two hotel stays during my road trip to San Miguel–Guadalajara–Puerto Vallarta, and got a $50 statement credit every year. You should follow Ramon Anibal's travel page and sign up for his next webinar. You can thank me later!"
+              </p>
+              <p className="font-semibold text-[#15548f]">— Terrie Moore</p>
+            </div>
+            <div className="flex flex-col gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-8">
+              <p className="leading-relaxed text-gray-600">
+                "Ramon Anibal has helped us travel for so much less money than before. I used to use mileage cards like everyone else does — Ramon taught me how to multiply the value. My husband and I have taken a total of 12 round trip flights in the past 2 years and not one has been full price. This system really works. It's worth the time."
+              </p>
+              <p className="font-semibold text-[#15548f]">— Rebecca Ellenson</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Banner 2 */}
+      <div className="bg-[#15548f] py-6 text-center text-white">
+        <p className="text-4xl font-semibold">Book a Free Travel Consultation</p>
+        <div className="mt-3 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="#consultation"
+            className="inline-block rounded-full border-2 border-white px-6 py-2 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-[#15548f]"
+          >
+            Use my Calendly
+          </a>
+          <a
+            href="https://wa.me/13057880456?text=Hi%2C%20I'm%20interested%20in%20your%20Points%20%26%20Miles%20program"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-full border-2 border-white px-6 py-2 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-[#15548f]"
+          >
+            Message us on WhatsApp
+          </a>
+        </div>
+      </div>
+
       {/* Book a Free Travel Consultation */}
       <section id="consultation" className="bg-white py-20">
         <div className="mx-auto max-w-4xl px-6">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-[#15548f] md:text-4xl">
-              Book a Free Travel Consultation
+              Claim Your Slot
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-600">
               Ready to start your journey? Schedule a free consultation with our
