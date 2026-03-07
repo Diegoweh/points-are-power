@@ -17,19 +17,23 @@ const services = [
     name: "Concierge Strategy Intensive",
     subtitle: "3-Hour Private Consultation",
     price: "$157",
-    description: "Work 1:1 with Ramon for a personalized roadmap built around your travel goals and spending patterns.",
+    originalPrice: "$247", // Added
+    stripeLink: "https://buy.stripe.com/14AaEW2Ji8WAbHIfFd3Nm0c", // Replace with your link
+    description: "Work 1:1 with Ramon to build a personalized strategy designed for your individual travel needs and goals. ✈️",
     features: [
       "3 hours of private 1:1 strategy",
-      "Flexible schedule: choose 1 session of 3 hours, or 2 sessions of 1.5 hours, or 3 sessions of 1 hour",
+      "Flexible schedule: choose 1 session of 3 hours, or 2 sessions of 1.5 hours",
       "Custom points & travel roadmap",
       "Portfolio review & card recommendations",
     ],
   },
   {
     name: "Toe in the Water",
-    subtitle: "4-Week Strategic Introduction",
+    subtitle: "4-Week Group Strategic Introduction",
     price: "$597",
-    description: "Start smart. Build a real credit card points strategy from the ground up in a small-group setting.",
+    originalPrice: "$797", // Added
+    stripeLink: "https://buy.stripe.com/5kQ8wOfw4egU27864D3Nm0b", // Replace with your link
+    description: "Start smart. You’ll learn to build your personal points strategy and start stacking points for the flights, upgrades, and hotel stays you want. ✈️",
     features: [
       "4 live 90-min group sessions",
       "Credit fundamentals & responsible use",
@@ -40,9 +44,11 @@ const services = [
   },
   {
     name: "Wading in the Water",
-    subtitle: "8-Week Guided Implementation",
+    subtitle: "8-Week Group Guided Implementation",
     price: "$1,297",
-    description: "Move from strategy to execution. Apply, track, and build your points ecosystem with expert guidance.",
+    originalPrice: "$1,597", // Added
+    stripeLink: "https://buy.stripe.com/5kQ3cues0gp2134ct13Nm0a", // Replace with your link
+    description: "The sweet spot where things start paying off. Learn to apply for the right cards so you can start traveling like a VIP—flying better, staying better, and moving through the world like a rock star. ✈️",
     features: [
       "8 live 90-min group sessions",
       "Live application walkthroughs",
@@ -54,9 +60,11 @@ const services = [
   },
   {
     name: "Deep Waters Strategy",
-    subtitle: "12-Week Advanced Optimization",
+    subtitle: "12-Week Group Advanced Optimization",
     price: "$1,997",
-    description: "Build a coordinated, multi-card ecosystem. Precision strategy for serious points earners ready to scale.",
+    originalPrice: "$2,497", // Added
+    stripeLink: "https://buy.stripe.com/5kQcN4abK7Sw5jkboX3Nm09", // Replace with your link
+    description: "This is where it all comes together. You’ll build the tools and strategy so flying first class and staying in luxury hotels stops being a dream — and becomes your new normal. ✈️",
     features: [
       "12 live 90-min group sessions",
       "Real-time offer analysis",
@@ -65,7 +73,27 @@ const services = [
       "3 private 90-min sessions with Ramon",
     ],
   },
-  
+];
+
+const testimonials = [
+  {
+    name: "Terrie Moore",
+    role: "",
+    image: "/img/terrie.webp", // Replace with real image
+    quote: "Have you ever wondered how I can travel so much? Well, thanks to a virtual workshop called Points Are Power I learned a lot of valuable info that upgraded my travel experience. Things like having the right travel card that offers the most points. I used my Chase points to help pay for my airline ticket to Thailand, to book two hotel stays during my road trip to San Miguel–Guadalajara–Puerto Vallarta, and got a $50 statement credit every year. You should follow Ramon Anibal's travel page and sign up for his next webinar. You can thank me later!",
+  },
+  {
+    name: "Rebecca Ellenson",
+    role: "",
+    image: "/img/rebecca.webp", // Replace with real image
+    quote: "Ramon Anibal has helped us travel for so much less money than before. I used to use mileage cards like everyone else does — Ramon taught me how to multiply the value. My husband and I have taken a total of 12 round trip flights in the past 2 years and not one has been full price. This system really works. It's worth the time.",
+  },
+  // {
+  //   name: "Elena Rodriguez",
+  //   role: "Digital Nomad",
+  //   image: "https://randomuser.me/api/portraits/women/68.jpg", // Replace with real image
+  //   quote: "I thought I knew what I was doing, but the Strategy Intensive showed me how much I was leaving on the table. Worth every penny.",
+  // },
 ];
 
 export default function Home() {
@@ -197,10 +225,10 @@ export default function Home() {
                 Points aren't just rewards, they're leverage
               </h2>
               <p className="mt-6 leading-relaxed text-gray-600">
-                When used strategically, they unlock travel, upgrades, experiences, and financial flexibility you didn't know were possible.
+                Use them strategically and they unlock free flights, luxury hotel stays, upgrades, and travel experiences most people think they have to pay cash for.
               </p>
               <p className="mt-4 leading-relaxed text-gray-600">
-                I'll teach you how to earn smarter, redeem better, and stop leaving value on the table. This isn't about spending more, it's about maximizing what you already spend. Your everyday purchases can fund extraordinary experiences.
+                I'll show you how to earn smarter, redeem better, and turn the money you already spend into extraordinary first-class travel. ✈️
               </p>
             </div>            
           </div>
@@ -223,7 +251,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-block rounded-full border-2 border-white px-6 py-2 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-[#15548f]"
           >
-            Message us on WhatsApp
+            Message me on WhatsApp
           </a>
         </div>
       </div>
@@ -275,10 +303,15 @@ export default function Home() {
                 <p className="mt-3 text-sm text-gray-500">
                   {service.description}
                 </p>
-                <div className="mt-6">
+                <div className="mt-6 flex items-baseline gap-2">
                   <p className="text-4xl font-bold text-[#15548f]">
                     {service.price}
                   </p>
+                  {service.originalPrice && (
+                    <p className="text-lg text-gray-400 line-through decoration-gray-400">
+                      {service.originalPrice}
+                    </p>
+                  )}
                 </div>
                 <ul className="mt-6 flex-1 space-y-3">
                   {service.features.map((feature) => (
@@ -304,7 +337,9 @@ export default function Home() {
                   ))}
                 </ul>
                 <a
-                  href="#contact"
+                  href={service.stripeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`mt-8 block rounded-full py-3 text-center text-sm font-semibold transition-colors ${
                     service.popular
                       ? "bg-[#15548f] text-white hover:bg-[#15548f]/90"
@@ -318,25 +353,53 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
       {/* Testimonials Section */}
-      <section className="bg-white py-20">
+      <section id="testimonials" className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <h2 className="mb-12 text-center text-3xl font-bold text-[#15548f] md:text-4xl">
-            What Our Members Are Saying
-          </h2>
-          <div className="grid gap-8 md:grid-cols-2">
-            <div className="flex flex-col gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-8">
-              <p className="leading-relaxed text-gray-600">
-                "Have you ever wondered how I can travel so much? Well, thanks to a virtual workshop called Points Are Power I learned a lot of valuable info that upgraded my travel experience. Things like having the right travel card that offers the most points. I used my Chase points to help pay for my airline ticket to Thailand, to book two hotel stays during my road trip to San Miguel–Guadalajara–Puerto Vallarta, and got a $50 statement credit every year. You should follow Ramon Anibal's travel page and sign up for his next webinar. You can thank me later!"
-              </p>
-              <p className="font-semibold text-[#15548f]">— Terrie Moore</p>
-            </div>
-            <div className="flex flex-col gap-4 rounded-2xl border border-gray-200 bg-gray-50 p-8">
-              <p className="leading-relaxed text-gray-600">
-                "Ramon Anibal has helped us travel for so much less money than before. I used to use mileage cards like everyone else does — Ramon taught me how to multiply the value. My husband and I have taken a total of 12 round trip flights in the past 2 years and not one has been full price. This system really works. It's worth the time."
-              </p>
-              <p className="font-semibold text-[#15548f]">— Rebecca Ellenson</p>
-            </div>
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-[#15548f] md:text-4xl">
+              Success Stories
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+              See how our clients are turning everyday spending into luxury travel experiences.
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-8 md:grid-cols-2">
+            {testimonials.map((t, index) => (
+              <div key={index} className="flex flex-col rounded-2xl border border-gray-100 bg-gray-50 p-8 shadow-sm transition-transform hover:-translate-y-1">
+                <div className="mb-6 flex items-center gap-4">
+                  <img 
+                    src={t.image} 
+                    alt={t.name} 
+                    className="h-14 w-14 rounded-full border-2 border-[#15548f] object-cover"
+                  />
+                  <div>
+                    <h4 className="font-bold text-gray-900">{t.name}</h4>
+                    
+                  </div>
+                </div>
+                
+                <div className="relative">
+                  {/* Quote Icon Decoration */}
+                  <span className="absolute -top-4 -left-2 text-4xl text-[#15548f]/30 font-serif">“</span>
+                  <p className="italic text-gray-700 leading-relaxed">
+                    {t.quote}
+                  </p>
+                </div>
+
+                <div className="mt-6 flex text-[#15548f]">
+                  {/* 5-star rating */}
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -357,7 +420,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-block rounded-full border-2 border-white px-6 py-2 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-[#15548f]"
           >
-            Message us on WhatsApp
+            Message me on WhatsApp
           </a>
         </div>
       </div>
@@ -370,8 +433,7 @@ export default function Home() {
               Claim Your Slot
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-              Ready to start your journey? Schedule a free consultation with our
-              travel points experts and discover how to make luxury travel a
+              Ready to start your journey? Schedule a free consultation and discover how to make luxury travel a
               reality for your family.
             </p>
           </div>
@@ -394,7 +456,7 @@ export default function Home() {
           <div className="text-center">
             <h2 className="text-3xl font-bold text-[#15548f] md:text-4xl">Get in Touch</h2>
             <p className="mx-auto mt-4 max-w-md text-gray-600">
-              Have questions? Fill out the form and we&apos;ll connect with you directly on WhatsApp.
+              Have questions? Fill out the form and I&apos;ll connect with you directly on WhatsApp.
             </p>
           </div>
           <div className="mt-10">

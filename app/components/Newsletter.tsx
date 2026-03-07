@@ -38,7 +38,7 @@ export default function Newsletter() {
       {!submitted ? (
         <div>
           <h4 className="mb-2 text-3xl font-semibold text-white">
-            Subscribe To Us
+            Subscribe
           </h4>
           <h3 className="mb-8 text-lg text-white/80">
             Enter your email address for more updates

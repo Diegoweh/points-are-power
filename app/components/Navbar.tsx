@@ -19,11 +19,12 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#home">
           <Image
-            src="/navbar-logo.avif"
+            src="/footer-logo.avif"
             alt="Points Are Power"
             width={140}
             height={40}
             priority
+            className="h-15 w-auto"
           />
         </a>
 
