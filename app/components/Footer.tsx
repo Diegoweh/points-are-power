@@ -39,7 +39,7 @@ export default function Footer() {
           {/* Social links */}
           <div className="flex items-center gap-4">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/pointsarepower/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -62,7 +62,7 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61581023353684&locale=es_LA"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"

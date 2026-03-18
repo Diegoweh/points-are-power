@@ -16,6 +16,7 @@ const services = [
   {
     name: "Concierge Strategy Intensive",
     subtitle: "3-Hour Private Consultation",
+    popular: true,
     price: "$157",
     originalPrice: "$247", // Added
     stripeLink: "https://buy.stripe.com/14AaEW2Ji8WAbHIfFd3Nm0c", // Replace with your link
@@ -56,7 +57,6 @@ const services = [
       "Points organization & referral strategy",
       "2 private 90-min sessions with Ramon",
     ],
-    popular: true,
   },
   {
     name: "Deep Waters Strategy",
@@ -127,12 +127,20 @@ export default function Home() {
             Transform everyday expenses into unforgettable travel experiences.
             Travel freedom is more accessible than ever.
           </p>
-          <a
-            href="#services"
-            className="mt-8 inline-block rounded-full bg-[#15548f] px-8 py-3 text-lg font-semibold text-white transition-transform hover:scale-105"
-          >
-            Explore Our Services
-          </a>
+          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <a
+              href="#services"
+              className="inline-block rounded-full bg-[#15548f] px-8 py-3 text-lg font-semibold text-white transition-transform hover:scale-105"
+            >
+              Explore Our Services
+            </a>
+            <a
+              href="#consultation"
+              className="inline-block rounded-full border-2 border-white bg-white/10 px-8 py-3 text-lg font-semibold text-white backdrop-blur-sm transition-transform hover:scale-105 hover:bg-white/20"
+            >
+              Book Your Free 45-Min Consultation
+            </a>
+          </div>
         </div>
       </section>
 

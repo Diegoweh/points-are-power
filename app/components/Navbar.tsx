@@ -46,7 +46,7 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           {/* Instagram */}
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/pointsarepower/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -71,7 +71,7 @@ export default function Navbar() {
 
           {/* Facebook */}
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/profile.php?id=61581023353684&locale=es_LA"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
