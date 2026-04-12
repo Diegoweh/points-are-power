@@ -18,9 +18,9 @@ const services = [
     subtitle: "3-Hour Private Consultation",
     popular: true,
     price: "$157",
-    originalPrice: "$247", // Added
-    stripeLink: "https://buy.stripe.com/14AaEW2Ji8WAbHIfFd3Nm0c", // Replace with your link
-    description: "Work 1:1 with Ramon to build a personalized strategy designed for your individual travel needs and goals. ✈️",
+    originalPrice: "$247",
+    stripeLink: "https://buy.stripe.com/14AaEW2Ji8WAbHIfFd3Nm0c",
+    description: "Work 1:1 with Ramon to build a personalized strategy designed for your specific travel needs. Flexible schedule: 1 session of 3 hours, or 2 sessions of 1.5 hours.",
     features: [
       "3 hours of private 1:1 strategy",
       "Flexible schedule: choose 1 session of 3 hours, or 2 sessions of 1.5 hours",
@@ -29,14 +29,14 @@ const services = [
     ],
   },
   {
-    name: "Toe in the Water",
-    subtitle: "4-Week Group Strategic Introduction",
+    name: "The Pre-Board",
+    subtitle: "This is where you finally see what’s possible.",
     price: "$597",
-    originalPrice: "$797", // Added
-    stripeLink: "https://buy.stripe.com/5kQ8wOfw4egU27864D3Nm0b", // Replace with your link
-    description: "Start smart. You’ll learn to build your personal points strategy and start stacking points for the flights, upgrades, and hotel stays you want. ✈️",
+    originalPrice: "$797",
+    stripeLink: "https://buy.stripe.com/5kQ8wOfw4egU27864D3Nm0b",
+    description: "6-Week · Classes 1–6 · Introduction Classes\n\nHere, you build your foundation—learning the system, avoiding common mistakes, and getting clear on your travel goals, spending, and timeline.",
     features: [
-      "4 live 90-min group sessions",
+      "6 live 90-min group sessions",
       "Credit fundamentals & responsible use",
       "Card selection framework",
       "Sign-up bonus strategy",
@@ -44,14 +44,14 @@ const services = [
     ],
   },
   {
-    name: "Wading in the Water",
-    subtitle: "8-Week Group Guided Implementation",
+    name: "The Flight Plan",
+    subtitle: "This is where you learn how it actually works.",
     price: "$1,297",
-    originalPrice: "$1,597", // Added
-    stripeLink: "https://buy.stripe.com/5kQ3cues0gp2134ct13Nm0a", // Replace with your link
-    description: "The sweet spot where things start paying off. Learn to apply for the right cards so you can start traveling like a VIP—flying better, staying better, and moving through the world like a rock star. ✈️",
+    originalPrice: "$1,597",
+    stripeLink: "https://buy.stripe.com/5kQ3cues0gp2134ct13Nm0a",
+    description: "6-Week · Classes 7–12 · From Possibility to Clarity\n\nYou go from basic understanding to real strategy—earning faster, using sign-up bonuses, transferring points, and booking with intention. You’ll learn to make smarter decisions that increase your results.",
     features: [
-      "8 live 90-min group sessions",
+      "6 live 90-min group sessions",
       "Live application walkthroughs",
       "Denial troubleshooting",
       "Points organization & referral strategy",
@@ -59,14 +59,14 @@ const services = [
     ],
   },
   {
-    name: "Deep Waters Strategy",
-    subtitle: "12-Week Group Advanced Optimization",
+    name: "The Takeoff",
+    subtitle: "This is where you take action and make it real.",
     price: "$1,997",
-    originalPrice: "$2,497", // Added
-    stripeLink: "https://buy.stripe.com/5kQcN4abK7Sw5jkboX3Nm09", // Replace with your link
-    description: "This is where it all comes together. You’ll build the tools and strategy so flying first class and staying in luxury hotels stops being a dream — and becomes your new normal. ✈️",
+    originalPrice: "$2,497",
+    stripeLink: "https://buy.stripe.com/5kQcN4abK7Sw5jkboX3Nm09",
+    description: "6-Week · Classes 13–18 · From Clarity to Execution\n\nYou stop guessing, move with confidence, and turn what you’ve learned into consistent results—building a system that lets you travel like never before.",
     features: [
-      "12 live 90-min group sessions",
+      "6 live 90-min group sessions",
       "Real-time offer analysis",
       "Advanced sequencing & timing",
       "Business card & referral strategy",
@@ -190,7 +190,7 @@ export default function Home() {
             <div className="flex items-center justify-center">
               <div className="flex w-full items-center justify-center rounded-2xl bg-accent/40">
                 <img
-                  src="/img/ramon.jpg"
+                  src="/img/ramon.webp"
                   alt="Ramon Quintana"
                   className="object-contain rounded-2xl h-100 "
                 />
@@ -308,9 +308,13 @@ export default function Home() {
                 <p className="mt-1 text-xs font-medium text-gray-400 uppercase tracking-wide">
                   {service.subtitle}
                 </p>
-                <p className="mt-3 text-sm text-gray-500">
-                  {service.description}
-                </p>
+                <div className="mt-3 space-y-1">
+                  {service.description.split("\n\n").map((para, i) => (
+                    <p key={i} className={`text-sm ${i === 0 ? "font-medium text-gray-400" : "text-gray-500"}`}>
+                      {para}
+                    </p>
+                  ))}
+                </div>
                 <div className="mt-6 flex items-baseline gap-2">
                   <p className="text-4xl font-bold text-[#15548f]">
                     {service.price}
