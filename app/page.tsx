@@ -14,63 +14,52 @@ const galleryImages = [
 
 const services = [
   {
-    name: "Concierge Strategy Intensive",
-    subtitle: "3-Hour Private Consultation",
+    name: "The Pre-Board",
+    subtitle: "2-Hour Private Consultation",
     popular: true,
     price: "$157",
     originalPrice: "$247",
     stripeLink: "https://buy.stripe.com/14AaEW2Ji8WAbHIfFd3Nm0c",
-    description: "Work 1:1 with Ramon to build a personalized strategy designed for your specific travel needs. Flexible schedule: 1 session of 3 hours, or 2 sessions of 1.5 hours.",
+    description: "Work 1:1 with Ramon to build a personalized strategy designed for your specific travel needs. Flexible schedule: 1 session of 2 hours, or 2 sessions of 1 hour.",
     features: [
-      "3 hours of private 1:1 strategy",
-      "Flexible schedule: choose 1 session of 3 hours, or 2 sessions of 1.5 hours",
-      "Custom points & travel roadmap",
-      "Portfolio review & card recommendations",
-    ],
-  },
-  {
-    name: "The Pre-Board",
-    subtitle: "This is where you finally see what’s possible.",
-    price: "$597",
-    originalPrice: "$797",
-    stripeLink: "https://buy.stripe.com/5kQ8wOfw4egU27864D3Nm0b",
-    description: "6-Week · Classes 1–6 · Introduction Classes\n\nHere, you build your foundation—learning the system, avoiding common mistakes, and getting clear on your travel goals, spending, and timeline.",
-    features: [
-      "6 live 90-min group sessions",
-      "Credit fundamentals & responsible use",
-      "Card selection framework",
-      "Sign-up bonus strategy",
-      "1 private 90-min session with Ramon",
+      "2 hours of private 1:1 strategy",
+      "Next Trip guidance",
+      "Points & Miles Roadmap",
+      "Credit Card review & recommendations",
     ],
   },
   {
     name: "The Flight Plan",
-    subtitle: "This is where you learn how it actually works.",
-    price: "$1,297",
-    originalPrice: "$1,597",
-    stripeLink: "https://buy.stripe.com/5kQ3cues0gp2134ct13Nm0a",
-    description: "6-Week · Classes 7–12 · From Possibility to Clarity\n\nYou go from basic understanding to real strategy—earning faster, using sign-up bonuses, transferring points, and booking with intention. You’ll learn to make smarter decisions that increase your results.",
+    subtitle: "1st Course · Foundations Intro Program",
+    price: "$597",
+    originalPrice: "$897",
+    stripeLink: "https://buy.stripe.com/5kQ8wOfw4egU27864D3Nm0b",
+    description: "4-Week · Classes 1–4\n\nThis is where you finally see what’s possible.\n\nThe Pre-Board is designed to help beginners build a strong foundation in credit card points, travel strategy, and responsible card usage. Students gain clarity, avoid common mistakes, and learn the fundamentals needed to begin traveling smarter with confidence.",
     features: [
-      "6 live 90-min group sessions",
-      "Live application walkthroughs",
-      "Denial troubleshooting",
-      "Points organization & referral strategy",
-      "2 private 90-min sessions with Ramon",
+      "4 live 90-min group sessions (60 min teaching + 30 min live Q&A)",
+      "Credit fundamentals & responsible use",
+      "Card selection framework",
+      "Sign-up bonus strategy",
+      "Beginner travel planning guidance",
+      "1 private 60-min strategy session with Ramon",
     ],
   },
   {
-    name: "The Takeoff",
-    subtitle: "This is where you take action and make it real.",
-    price: "$1,997",
-    originalPrice: "$2,497",
-    stripeLink: "https://buy.stripe.com/5kQcN4abK7Sw5jkboX3Nm09",
-    description: "6-Week · Classes 13–18 · From Clarity to Execution\n\nYou stop guessing, move with confidence, and turn what you’ve learned into consistent results—building a system that lets you travel like never before.",
+    name: "The Take Off",
+    subtitle: "2nd Course · From Possibility to Clarity",
+    price: "$897",
+    originalPrice: "$1,297",
+    stripeLink: "https://buy.stripe.com/5kQ3cues0gp2134ct13Nm0a",
+    description: "4-Week · Classes 5–8\n\nThis is where strategy begins to create real momentum.\n\nThe Take Off helps students move beyond the basics into smarter earning, stronger applications, better organization, and intentional travel planning. Students learn how to maximize opportunities, troubleshoot challenges, and build systems that increase their travel results faster.",
     features: [
-      "6 live 90-min group sessions",
-      "Real-time offer analysis",
-      "Advanced sequencing & timing",
-      "Business card & referral strategy",
-      "3 private 90-min sessions with Ramon",
+      "4 live 90-min group sessions (60 min teaching + 30 min live Q&A)",
+      "Live application walkthroughs",
+      "Credit card denial troubleshooting",
+      "Points organization & referral strategy",
+      "Advanced card selection framework",
+      "Player 2 strategy",
+      "Advanced sign-up bonus strategy",
+      "2 private 60-min strategy sessions with Ramon",
     ],
   },
 ];
@@ -138,7 +127,7 @@ export default function Home() {
               href="#consultation"
               className="inline-block rounded-full border-2 border-white bg-white/10 px-8 py-3 text-lg font-semibold text-white backdrop-blur-sm transition-transform hover:scale-105 hover:bg-white/20"
             >
-              Book Your Free 45-Min Consultation
+              Book Your Free 30-Min Consultation
             </a>
           </div>
         </div>
@@ -287,7 +276,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <div
                 key={service.name}
@@ -451,6 +440,34 @@ export default function Home() {
           </div>
           <div className="mt-10">
             <Calendly />
+          </div>
+        </div>
+      </section>
+
+      {/* Intake Form Section */}
+      <section id="intake-form" className="bg-gray-50 py-20">
+        <div className="mx-auto max-w-4xl px-6">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-[#15548f] md:text-4xl">
+              Travel Intake Form
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+              Please complete this form when making an appointment on Calendly or WhatsApp.
+            </p>
+          </div>
+          <div className="mt-10 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSd-kkBWR9l_LVlVJGD2-eYrxTTsWKlLCYQsjce0b906uz5Isg/viewform?embedded=true"
+              width="100%"
+              height="1200"
+              frameBorder={0}
+              marginHeight={0}
+              marginWidth={0}
+              title="Travel Intake Form"
+              className="w-full"
+            >
+              Loading…
+            </iframe>
           </div>
         </div>
       </section>
