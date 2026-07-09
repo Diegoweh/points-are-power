@@ -17,9 +17,6 @@ const services = [
     name: "The Pre-Board",
     subtitle: "2-Hour Private Consultation",
     popular: true,
-    price: "$157",
-    originalPrice: "$247",
-    stripeLink: "https://buy.stripe.com/14AaEW2Ji8WAbHIfFd3Nm0c",
     description: "Work 1:1 with Ramon to build a personalized strategy designed for your specific travel needs. Flexible schedule: 1 session of 2 hours, or 2 sessions of 1 hour.",
     features: [
       "2 hours of private 1:1 strategy",
@@ -31,9 +28,6 @@ const services = [
   {
     name: "The Flight Plan",
     subtitle: "1st Course · Foundations Intro Program",
-    price: "$597",
-    originalPrice: "$897",
-    stripeLink: "https://buy.stripe.com/5kQ8wOfw4egU27864D3Nm0b",
     description: "4-Week · Classes 1–4\n\nThis is where you finally see what’s possible.\n\nThe Pre-Board is designed to help beginners build a strong foundation in credit card points, travel strategy, and responsible card usage. Students gain clarity, avoid common mistakes, and learn the fundamentals needed to begin traveling smarter with confidence.",
     features: [
       "4 live 90-min group sessions (60 min teaching + 30 min live Q&A)",
@@ -47,9 +41,6 @@ const services = [
   {
     name: "The Take Off",
     subtitle: "2nd Course · From Possibility to Clarity",
-    price: "$897",
-    originalPrice: "$1,297",
-    stripeLink: "https://buy.stripe.com/5kQ3cues0gp2134ct13Nm0a",
     description: "4-Week · Classes 5–8\n\nThis is where strategy begins to create real momentum.\n\nThe Take Off helps students move beyond the basics into smarter earning, stronger applications, better organization, and intentional travel planning. Students learn how to maximize opportunities, troubleshoot challenges, and build systems that increase their travel results faster.",
     features: [
       "4 live 90-min group sessions (60 min teaching + 30 min live Q&A)",
@@ -304,16 +295,6 @@ export default function Home() {
                     </p>
                   ))}
                 </div>
-                <div className="mt-6 flex items-baseline gap-2">
-                  <p className="text-4xl font-bold text-[#15548f]">
-                    {service.price}
-                  </p>
-                  {service.originalPrice && (
-                    <p className="text-lg text-gray-400 line-through decoration-gray-400">
-                      {service.originalPrice}
-                    </p>
-                  )}
-                </div>
                 <ul className="mt-6 flex-1 space-y-3">
                   {service.features.map((feature) => (
                     <li
@@ -338,7 +319,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <a
-                  href={service.stripeLink}
+                  href="https://calendly.com/10qramon/new-meeting?embed_domain=localhost%3A3000&embed_type=Inline&back=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`mt-8 block rounded-full py-3 text-center text-sm font-semibold transition-colors ${
@@ -347,7 +328,7 @@ export default function Home() {
                       : "bg-accent text-[#15548f] hover:bg-accent/80"
                   }`}
                 >
-                  Get Started
+                  Book a Free Strategy Call
                 </a>
               </div>
             ))}
