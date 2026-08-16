@@ -92,7 +92,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src="https://www.pexels.com/es-es/download/video/9525409/" type="video/mp4" />
+          <source src="/hero-video.mp4" type="video/mp4" />
         </video>
 
         {/* Overlay */}
@@ -101,14 +101,14 @@ export default function Home() {
         {/* Content */}
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
-            Unlock Luxury Travel with Points &amp; Miles
+          True travel freedom isn't about waiting for access it's about creating it.
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-xl text-white/80 md:text-2xl">
+          {/* <p className="mx-auto mt-6 max-w-2xl text-xl text-white/80 md:text-2xl">
             Transform everyday expenses into unforgettable travel experiences.
             Travel freedom is more accessible than ever.
-          </p>
+          </p> */}
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <a
+            {/* <a
               href="#services"
               className="inline-block rounded-full bg-[#15548f] px-8 py-3 text-lg font-semibold text-white transition-transform hover:scale-105"
             >
@@ -119,7 +119,7 @@ export default function Home() {
               className="inline-block rounded-full border-2 border-white bg-white/10 px-8 py-3 text-lg font-semibold text-white backdrop-blur-sm transition-transform hover:scale-105 hover:bg-white/20"
             >
               Book Your Free 30-Min Consultation
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
