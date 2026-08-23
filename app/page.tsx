@@ -1,3 +1,4 @@
+import Hero from "./components/Hero";
 import Carousel from "./components/Carousel";
 import Calendly from "./components/Calendly";
 import Newsletter from "./components/Newsletter";
@@ -80,49 +81,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section
-        id="home"
-        className="relative flex min-h-screen items-center justify-center overflow-hidden"
-      >
-        {/* Background video */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
-
-        {/* Content */}
-        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
-          <h1 className="text-4xl font-bold leading-tight text-white md:text-6xl">
-          True travel freedom isn't about waiting for access it's about creating it.
-          </h1>
-          {/* <p className="mx-auto mt-6 max-w-2xl text-xl text-white/80 md:text-2xl">
-            Transform everyday expenses into unforgettable travel experiences.
-            Travel freedom is more accessible than ever.
-          </p> */}
-          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            {/* <a
-              href="#services"
-              className="inline-block rounded-full bg-[#15548f] px-8 py-3 text-lg font-semibold text-white transition-transform hover:scale-105"
-            >
-              Explore Our Services
-            </a>
-            <a
-              href="#consultation"
-              className="inline-block rounded-full border-2 border-white bg-white/10 px-8 py-3 text-lg font-semibold text-white backdrop-blur-sm transition-transform hover:scale-105 hover:bg-white/20"
-            >
-              Book Your Free 30-Min Consultation
-            </a> */}
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* Banner */}
       <div className="bg-[#15548f] py-4 text-center text-white font-semibold text-4xl">
