@@ -51,12 +51,12 @@ export default function Hero() {
       </button>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-3xl px-6 pb-16 text-center md:pb-24">
+      {/* <div className="relative z-10 mx-auto max-w-3xl px-6 pb-16 text-center md:pb-24">
         <h1 className="text-2xl font-bold leading-tight text-white md:text-4xl">
           True travel freedom isn&apos;t about waiting for access it&apos;s about creating it.
         </h1>
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center" />
-      </div>
+      </div> */}
     </section>
   );
 }
