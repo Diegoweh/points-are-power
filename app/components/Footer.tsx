@@ -15,7 +15,7 @@ export default function Footer() {
           {/* Logo */}
           <a href="#home">
             <Image
-              src="/footer-logo.avif"
+              src="/lux-logo.png"
               alt="Points Are Power"
               width={90}
               height={90}

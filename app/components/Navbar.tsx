@@ -19,7 +19,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#home">
           <Image
-            src="/footer-logo.avif"
+            src="/lux-logo.png"
             alt="Points Are Power"
             width={140}
             height={40}
